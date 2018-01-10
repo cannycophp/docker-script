@@ -17,7 +17,7 @@ sudo curl -L https://github.com/docker/compose/releases/download/1.18.0/docker-c
 sudo chmod +x /usr/local/bin/docker-compose
 #然后是建docker的php开发环境
 mkdir /Dockerfiles
-cd Dockerfiles
+cd /Dockerfiles
 mkdir php
 mkdir nginx
 mkdir mysql
