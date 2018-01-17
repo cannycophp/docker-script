@@ -1,0 +1,10 @@
+version: "3"
+
+services:
+  flask:
+    build: ./docker-python-flask
+    volumes:
+      - /home/quotation:/code
+    ports:
+      - "5000:5000"
+    command: python3 main.py
