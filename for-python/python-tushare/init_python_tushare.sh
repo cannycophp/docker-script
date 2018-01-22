@@ -20,4 +20,5 @@ source py27env/bin/activate
 pip install bs4 requests pandas
 yum -y install gcc gcc-c++ kernel-devel
 yum -y install python-devel libxslt-devel libffi-devel openssl-devel
-pip install matplotlib tushare
+pip install matplotlib tushare sqlalchemy lxml MySQL-python
+yum -y install python-dev
