@@ -22,3 +22,8 @@ RUN mkdir /www && cd /www
 #    /sbin/swapon /var/swap.1
 RUN composer create-project laravel/laravel:5.4 blog && cd blog
 RUN composer update
+
+#安装node.js
+RUN apt-get install nodejs && apt-get install npm
+RUN npm install -g bower
+RUN npm install -g less
