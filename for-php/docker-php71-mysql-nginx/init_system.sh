@@ -63,8 +63,8 @@ FROM mysql:5.6
 EOF
 mkdir /www
 useradd www-data
-#编辑docker-composer.xml
-touch docker-composer.xml
+#编辑docker-compose.xml
+touch docker-compose.xml
 sudo tee docker-compose.yml <<-'EOF'
 nginx:
     build: ./nginx
