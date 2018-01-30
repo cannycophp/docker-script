@@ -1,8 +1,18 @@
 #!/bin/bash
 
+#第一步还是关掉setenforce吧，这个问题搞了我二天
+setenforce 0
+sed -i 's/SELINUX=enforcing/SELINUX=disabled/' /etc/selinux/config
+
 yum update -y --skip-broken
 yum install -y vim
-yum install -y docker
+#docker版本过低，添加新源的方法安装
+#yum install -y docker 
+yum install epel-release -y
+yum clean all
+yum install docker-io -y
+systemctl start docker
+
 #然后加上docker加速
 sudo mkdir -p /etc/docker
 sudo tee /etc/docker/daemon.json <<-'EOF'
