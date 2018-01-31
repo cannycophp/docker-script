@@ -41,6 +41,7 @@ FROM nginx:1.9
 EOF
 touch mysql/Dockerfile
 sudo tee mysql/Dockerfile <<-'EOF'
+#FROM registry.cn-hangzhou.aliyuncs.com/marmot/mysql-5.6
 FROM mysql:5.6
 EOF
 mkdir /www
