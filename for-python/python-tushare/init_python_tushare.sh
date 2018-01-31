@@ -21,4 +21,4 @@ pip install bs4 requests pandas
 yum -y install gcc gcc-c++ kernel-devel
 yum -y install python-devel libxslt-devel libffi-devel openssl-devel
 yum -y install mysql-devel
-pip install matplotlib tushare sqlalchemy lxml MySQL-python
+pip install lxml matplotlib tushare sqlalchemy  MySQL-python
