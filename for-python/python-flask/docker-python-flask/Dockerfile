@@ -9,3 +9,10 @@ WORKDIR /code
 RUN pip3 install flask
 RUN pip3 install flask-sqlalchemy
 RUN pip3 install flask_restful
+
+#如果要安装tushare,则需要安装这些东西
+RUN pip3 install bs4 requests pandas
+RUN yum -y install gcc gcc-c++ kernel-devel
+RUN yum -y install python-devel libxslt-devel libffi-devel openssl-devel
+RUN yum -y install mysql-devel
+RUN pip3 install matplotlib tushare sqlalchemy lxml MySQL-python
