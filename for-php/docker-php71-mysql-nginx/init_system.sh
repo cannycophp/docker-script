@@ -67,6 +67,12 @@ EOF
 touch nginx/Dockerfile
 sudo tee nginx/Dockerfile <<-'EOF'
 FROM nginx:1.9
+
+ADD nginx.conf /etc/nginx/nginx.conf
+ADD sites-enabled/* /etc/nginx/conf.d/
+
+VOLUME ["/www"]
+
 EOF
 touch mysql/Dockerfile
 sudo tee mysql/Dockerfile <<-'EOF'
