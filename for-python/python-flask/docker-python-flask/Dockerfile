@@ -6,6 +6,6 @@ RUN mkdir /code
 WORKDIR /code
 
 #安装需要的python库
-RUN pip3 install flask
-RUN pip3 install flask-sqlalchemy
-RUN pip3 install flask_restful
+RUN pip3 install -i https://pypi.tuna.tsinghua.edu.cn/simple flask
+RUN pip3 install -i https://pypi.tuna.tsinghua.edu.cn/simple flask-sqlalchemy
+RUN pip3 install -i https://pypi.tuna.tsinghua.edu.cn/simple flask_restful
